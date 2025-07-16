@@ -1,8 +1,20 @@
 {
   "name": "vite_react_shadcn_ts",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
+  "description": "**URL**: https://lovable.dev/projects/7092c635-5704-432a-a971-207af395cfcf",
+  "homepage": "https://github.com/brijeshco/hostel-vision-portal#readme",
+  "bugs": {
+    "url": "https://github.com/brijeshco/hostel-vision-portal/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brijeshco/hostel-vision-portal.git"
+  },
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "eslint.config.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
