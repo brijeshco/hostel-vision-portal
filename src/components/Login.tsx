@@ -9,6 +9,7 @@ import { UserCog, GraduationCap, Eye, EyeOff } from 'lucide-react';
 import { authenticate } from '@/lib/auth';
 import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/use-toast';
+import { useNavigate } from 'react-router-dom';
 
 export const Login: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -20,6 +21,7 @@ export const Login: React.FC = () => {
   
   const { login } = useAuth();
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const handleLogin = async (role: 'admin' | 'student') => {
     setIsLoading(true);
@@ -32,6 +34,8 @@ export const Login: React.FC = () => {
           title: "Login Successful",
           description: `Welcome back, ${user.name}!`,
         });
+        // Redirect to dashboard after successful login
+        navigate('/');
       } else {
         toast({
           title: "Login Failed",
